@@ -11,7 +11,7 @@ destfile <- "./electric_power/exdata-data-household_power_consumption.zip"
 
 
 datafile <- "./electric_power/household_power_consumption.txt"
-data <- read.table(datafile, header = TRUE, sep = ";")
+data <- read.table(datafile, header = TRUE, sep = ";", stringsAsFactors = FALSE)
 
 ##Subsets the data to look from Jan 2nd, 2007 to Feb 2nd, 2007
 subsetdata<- subset(data, (data$Date == "1/2/2007" | data$Date== "2/2/2007")) 
